@@ -1,54 +1,27 @@
-# Titanic Dataset: Data Cleaning & Preprocessing
 
-![Titanic](https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/RMS_Titanic_3.jpg/1200px-RMS_Titanic_3.jpg)
+# CodSoft Data Science Internship - Task 1: Titanic Survival Prediction
 
-This project demonstrates a complete data cleaning and preprocessing pipeline for the Titanic dataset, preparing it for machine learning tasks.
+This repository contains the work for Task 1 of my Data Science internship at CodSoft. 
 
-## Table of Contents
-- [Project Overview](#project-overview)
-- [Dataset Description](#dataset-description)
-- [Cleaning Steps](#cleaning-steps)
-- [How to Run](#how-to-run)
-- [Results](#results)
-- [Dependencies](#dependencies)
+## 📋 Project Description
+The goal of this task is to create a model that predicts whether a passenger survived the Titanic shipwreck based on features like age, sex, passenger class, and more. 
 
-## Project Overview
-This project covers:
-- Handling missing values
-- Converting categorical features
-- Normalizing numerical features
-- Outlier detection and treatment
+## 🛠️ Tech Stack
+- **Language:** Python
+- **Libraries:** Pandas, NumPy, Scikit-Learn, Matplotlib, Seaborn
+- **Tool:** Jupyter Notebook
 
-## Dataset Description
-The Titanic dataset contains information about 891 passengers including:
-- Survival status (Survived)
-- Passenger class (Pclass)
-- Age, Sex, Fare
-- Embarkation port (Embarked)
-- Cabin information
+## 🚀 Workflow
+1. **Data Preprocessing:** Handled missing values in `Age` and `Embarked` columns.
+2. **Exploratory Data Analysis (EDA):** Visualized key features to find correlations with survival rates.
+3. **Feature Engineering:** Used One-Hot Encoding for categorical variables and checked for outliers in `Age`.
+4. **Machine Learning:** Built a **Decision Tree Classifier** to perform the classification.
+5. **Evaluation:** The model achieved an accuracy of **78.2%**.
 
-Original dataset from [Kaggle](https://www.kaggle.com/c/titanic/data)
+## 📊 Summary of Results
+The analysis showed that 'Sex' and 'Pclass' were major predictors of survival, reflecting the "women and children first" policy during the disaster.
 
-## Cleaning Steps
 
-### 1. Missing Value Treatment
-- Age: Filled with median value
-- Embarked: Filled with most frequent value (mode)
-- Cabin: Dropped (too many missing values)
+---
 
-### 2. Categorical Encoding
-- Sex: Label encoded (male=0, female=1)
-- Embarked: One-hot encoded
 
-### 3. Feature Scaling
-- Age and Fare standardized using StandardScaler
-
-### 4. Outlier Handling
-- Fare outliers capped using IQR method
-- Visualized with boxplots before/after treatment
-
-## How to Run
-1. Clone this repository
-2. Install dependencies:
-   ```bash
-   pip install pandas numpy matplotlib seaborn scikit-learn
